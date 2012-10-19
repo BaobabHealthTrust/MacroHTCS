@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+    <!-- Configure spring to give a hook to axis2 without a ServletContext -->
+    <bean id="applicationContext"
+          class="org.apache.axis2.extensions.spring.receivers.ApplicationContextHolder" />
+
+    <bean id="placeholderConfig" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="location">
+            <value>file:///var/BaobabServices/HTC.properties</value>
+        </property>
+    </bean>
+
+    <import resource="dao-beans.xml" />
+
+    <!-- Axis2 Web Service, but to Spring, its just another bean that has dependencies -->
+    <bean id ="xmlProcessingService" class="com.baobab.htc.business.services.XmlProcessingService" >
+        <property name="counsellorDao" ref="counsellorDao" />
+        <property name="sessionDao" ref="sessionDao" />
+        <property name="sessionTypeDao" ref="sessionTypeDao" />
+        <property name="districtDao" ref="districtDao" />
+        <property name="sessionSexualRelationshipTypeDao" ref="sessionSexualRelationshipTypeDao" />
+        <property name="symptomDao" ref="symptomDao" />
+        <property name="planDao" ref="planDao" />
+        <property name="sessionSymptomDao" ref="sessionSymptomDao" />
+        <property name="sessionPlanDao" ref="sessionPlanDao" />
+        <property name="siteDao" ref="siteDao" />
+        <property name="periodDaoHelper" ref="periodDaoHelper" />
+        <property name="periodDao" ref="periodDao" />
+        <property name="sequenceGenerationService" ref="sequenceGenerationService" />
+        <property name="htcTransactionManager" ref="htcTransactionManager" />
+        <property name="errorDirectory" value="${htc.file.error}"/>
+        <property name="archiveDirectory" value="${htc.file.archive}"/>
+        <!--property name="errorDirectory" value="\errors"/>
+        <property name="archiveDirectory" value="\archive"/-->
+    </bean>
+
+    <bean id="sequenceGenerationService" class="com.baobab.htc.business.services.SequenceGenerationService" >
+        <property name="sequenceDao" ref="sequenceDao" />
+    </bean>
+
+
+    <bean id="htcService" class="com.baobab.htc.business.webservices.HtcService" >
+        <property name="xmlProcessingService" ref="xmlProcessingService" />
+    </bean>
+
+</beans>
+

@@ -1,0 +1,78 @@
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd&#xA;http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+
+    <bean id="myDataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="${htc.database.url}"/>
+        <property name="username" value="${htc.database.user}"/>
+        <property name="password" value="${htc.database.pass}"/>
+    </bean>
+
+    <!--tx:annotation-driven xmlns:tx="http://www.springframework.org/schema/tx" transaction-manager="htcTransactionManager"/-->
+
+    <bean id="htcTransactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="myDataSource"/>
+    </bean>
+
+    <bean id="counsellorDao" class="com.baobab.htc.data.daos.dao.spring.CounsellorDaoImpl" scope="singleton">
+        <property name="dataSource" ref="myDataSource"/>
+    </bean>
+    <bean id="districtDao" class="com.baobab.htc.data.daos.dao.spring.DistrictDaoImpl" scope="singleton">
+        <property name="dataSource" ref="myDataSource"/>
+    </bean>
+    <bean id="regionDao" class="com.baobab.htc.data.daos.dao.spring.RegionDaoImpl" scope="singleton">
+        <property name="dataSource" ref="myDataSource"/>
+    </bean>
+    <bean id="sessionDao" class="com.baobab.htc.data.daos.dao.spring.SessionDaoImpl" scope="singleton">
+        <property name="dataSource" ref="myDataSource"/>
+    </bean>
+    <bean id="sessionTypeDao" class="com.baobab.htc.data.daos.dao.spring.SessionTypeDaoImpl" scope="singleton">
+        <property name="dataSource" ref="myDataSource"/>
+    </bean>
+    <bean id="siteDao" class="com.baobab.htc.data.daos.dao.spring.SiteDaoImpl" scope="singleton">
+        <property name="dataSource" ref="myDataSource"/>
+    </bean>
+    <bean id="siteTypeDao" class="com.baobab.htc.data.daos.dao.spring.SiteTypeDaoImpl" scope="singleton">
+        <property name="dataSource" ref="myDataSource"/>
+    </bean>
+    <bean id="symptomDao" class="com.baobab.htc.data.daos.dao.spring.SymptomDaoImpl" scope="singleton">
+        <property name="dataSource" ref="myDataSource"/>
+    </bean>
+    <bean id="sequenceDao" class="com.baobab.htc.data.daos.dao.spring.SequenceDaoImpl" scope="singleton">
+        <property name="dataSource" ref="myDataSource"/>
+    </bean>
+    <bean id="planDao" class="com.baobab.htc.data.daos.dao.spring.PlanDaoImpl" scope="singleton">
+        <property name="dataSource" ref="myDataSource"/>
+    </bean>
+    <bean id="sessionPlanDao" class="com.baobab.htc.data.daos.dao.spring.SessionPlanDaoImpl" scope="singleton">
+        <property name="dataSource" ref="myDataSource"/>
+    </bean>
+    <bean id="sessionSymptomDao" class="com.baobab.htc.data.daos.dao.spring.SessionSymptomDaoImpl" scope="singleton">
+        <property name="dataSource" ref="myDataSource"/>
+    </bean>
+    <bean id="testingTypeDao" class="com.baobab.htc.data.daos.dao.spring.TestingTypeDaoImpl" scope="singleton">
+        <property name="dataSource" ref="myDataSource"/>
+    </bean>
+    <bean id="testingTypeCategoryDao" class="com.baobab.htc.data.daos.dao.spring.TestingTypeCategoryDaoImpl"
+          scope="singleton">
+        <property name="dataSource" ref="myDataSource"/>
+    </bean>
+    <bean id="sessionSexualRelationshipTypeDao"
+          class="com.baobab.htc.data.daos.dao.spring.SessionSexualRelationshipTypeDaoImpl" scope="singleton">
+        <property name="dataSource" ref="myDataSource"/>
+    </bean>
+    <bean id="periodDao" class="com.baobab.htc.data.daos.dao.spring.PeriodDaoImpl" scope="singleton">
+        <property name="dataSource" ref="myDataSource"/>
+    </bean>
+    <bean id="sexualRelationshipTypeDao" class="com.baobab.htc.data.daos.dao.spring.SexualRelationshipTypeDaoImpl"
+          scope="singleton">
+        <property name="dataSource" ref="myDataSource"/>
+    </bean>
+    <bean id="traditionalAuthorityDao" class="com.baobab.htc.data.daos.dao.spring.TraditionalAuthorityDaoImpl"
+          scope="singleton">
+        <property name="dataSource" ref="myDataSource"/>
+    </bean>
+    <bean id="periodDaoHelper" class="com.baobab.htc.data.daos.helper.spring.PeriodDaoHelperImpl" scope="singleton">
+        <property name="dataSource" ref="myDataSource"/>
+    </bean>
+</beans>

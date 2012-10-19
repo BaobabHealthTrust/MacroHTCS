@@ -1,0 +1,107 @@
+/* Sequence */
+INSERT INTO Sequence (id, sequenceName, tableId, increment, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (1, 'Counsellor', 100, 1, NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO Sequence (id, sequenceName, tableId, increment, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (2, 'District', 100, 1, NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO Sequence (id, sequenceName, tableId, increment, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (3, 'Region', 100, 1, NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO Sequence (id, sequenceName, tableId, increment, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (4, 'SessionPlan', 1000000, 1, NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO Sequence (id, sequenceName, tableId, increment, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (5, 'Plan', 100, 1, NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO Sequence (id, sequenceName, tableId, increment, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (6, 'Sequence', 100, 1, NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO Sequence (id, sequenceName, tableId, increment, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (7, 'SessionType', 100, 1, NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO Sequence (id, sequenceName, tableId, increment, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (8, 'Site', 100, 1, NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO Sequence (id, sequenceName, tableId, increment, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (9, 'SiteType', 100, 1, NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO Sequence (id, sequenceName, tableId, increment, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (10, 'Symptom', 1000000, 1, NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO Sequence (id, sequenceName, tableId, increment, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (11, 'SessionSymptom', 1000000, 1, NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO Sequence (id, sequenceName, tableId, increment, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (12, 'TestingType', 1000000, 1, NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO Sequence (id, sequenceName, tableId, increment, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (13, 'TestingTypeCategory', 100, 1, NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO Sequence (id, sequenceName, tableId, increment, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (14, 'SexualRelationshipType', 1000000, 1, NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO Sequence (id, sequenceName, tableId, increment, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (15, 'SessionSexualRelationshipType', 1000000, 1, NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO Sequence (id, sequenceName, tableId, increment, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (16, 'Period', 1000000, 1, NOW(), 'AUTO', NOW(), 'AUTO', 0);
+
+/* Session Types */
+INSERT INTO SessionType (sessionTypeId, description, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (0, 'Single', NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO SessionType (sessionTypeId, description, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (1, 'Comes with Partner', NOW(), 'AUTO', NOW(), 'AUTO', 0);
+
+/* Site Types */
+INSERT INTO SiteType (siteTypeId, description, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (0, 'Urban', NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO SiteType (siteTypeId, description, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (1, 'Peri-Urban', NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO SiteType (siteTypeId, description, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (2, 'Trading', NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO SiteType (siteTypeId, description, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (3, 'Rural', NOW(), 'AUTO', NOW(), 'AUTO', 0);
+
+/* Testing Type Categories */
+INSERT INTO TestingTypeCategory (testingTypeCategoryId, description, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (0, 'Static', NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO TestingTypeCategory (testingTypeCategoryId, description, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (1, 'Mobile', NOW(), 'AUTO', NOW(), 'AUTO', 0);
+
+/* Testing Types */
+INSERT INTO TestingType (testingTypeId, description, testingTypeCategoryId, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (0, 'Static', 0, NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO TestingType (testingTypeId, description, testingTypeCategoryId, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (1, 'Mobile', 1, NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO TestingType (testingTypeId, description, testingTypeCategoryId, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (2, 'Outreach - Car', 1, NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO TestingType (testingTypeId, description, testingTypeCategoryId, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (3, 'Outreach - Motorbike', 1, NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO TestingType (testingTypeId, description, testingTypeCategoryId, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (4, 'Door-to-Door', 1, NOW(), 'AUTO', NOW(), 'AUTO', 0);
+
+/* Regions */
+INSERT INTO Region (regionId, name, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (0, 'South', NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO Region (regionId, name, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (1, 'Central', NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO Region (regionId, name, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (2, 'North', NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO Region (regionId, name, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (3, 'Eastern', NOW(), 'AUTO', NOW(), 'AUTO', 0);
+
+/* Plans */
+INSERT INTO Plan (planId, description, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (0, 'Abstinence', NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO Plan (planId, description, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (1, 'Client Will Have One Partner', NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO Plan (planId, description, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (2, 'Client Will Ask Partner to be Monogamous', NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO Plan (planId, description, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (3, 'Client will increase use of Condoms', NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO Plan (planId, description, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (4, 'Client will reduce number of Partners', NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO Plan (planId, description, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (5, 'Eliminate high risk partners', NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO Plan (planId, description, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (6, 'Reduce Alcohol/Drug Use', NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO Plan (planId, description, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (7, 'Retest for HIV', NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO Plan (planId, description, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (8, 'Test Partner for HIV', NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO Plan (planId, description, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (9, 'Attend PTC', NOW(), 'AUTO', NOW(), 'AUTO', 0);
+
+/* Symptoms */
+INSERT INTO Symptom (symptomId, description, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (0, 'Cough for Three or More Weeks', NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO Symptom (symptomId, description, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (1, 'Night Sweats', NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO Symptom (symptomId, description, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (2, 'Unintentional Weight Loss', NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO Symptom (symptomId, description, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (3, 'Previous TB', NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO Symptom (symptomId, description, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (4, 'Abnormal Genital Discharge', NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO Symptom (symptomId, description, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (5, 'Sores or Ulcers in Genital Area', NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO Symptom (symptomId, description, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (6, 'Pain on Passing Urine', NOW(), 'AUTO', NOW(), 'AUTO', 0);
+
+/* Sexual Relationship Types */
+INSERT INTO SexualRelationshipType (sexualRelationshipTypeId, description, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (0, 'I have not had Sex in the Last Six Months', NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO SexualRelationshipType (sexualRelationshipTypeId, description, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (1, 'Spouse or Live-in Partner', NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO SexualRelationshipType (sexualRelationshipTypeId, description, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (2, 'Serious Partner', NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO SexualRelationshipType (sexualRelationshipTypeId, description, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (3, 'Casual Partner', NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO SexualRelationshipType (sexualRelationshipTypeId, description, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (4, 'Commercial', NOW(), 'AUTO', NOW(), 'AUTO', 0);
+
+/* Period */
+INSERT INTO Period (periodId, period, ending, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (1001, 1, STR_TO_DATE('30,7,2010','%d,%m,%Y'), NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO Period (periodId, period, ending, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (1002, 2, STR_TO_DATE('30,8,2010','%d,%m,%Y'), NOW(), 'AUTO', NOW(), 'AUTO', 1);
+INSERT INTO Period (periodId, period, ending, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (1003, 3, STR_TO_DATE('30,9,2010','%d,%m,%Y'), NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO Period (periodId, period, ending, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (1004, 4, STR_TO_DATE('30,10,2010','%d,%m,%Y'), NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO Period (periodId, period, ending, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (1005, 5, STR_TO_DATE('30,11,2010','%d,%m,%Y'), NOW(), 'AUTO', NOW(), 'AUTO', 0);
+
+/* Dummy Data */
+
+/* Districts */
+INSERT INTO District (districtId, name, regionId, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (1001, 'Mwanza', 0, NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO District (districtId, name, regionId, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (1002, 'Thyolo', 0, NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO District (districtId, name, regionId, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (2001, 'Dowa', 1, NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO District (districtId, name, regionId, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (2002, 'Dedza', 1, NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO District (districtId, name, regionId, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (3001, 'Mzimba', 2, NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO District (districtId, name, regionId, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (3002, 'Mzuzu', 2, NOW(), 'AUTO', NOW(), 'AUTO', 0);
+
+/* Traditional Authorities */
+INSERT INTO TraditionalAuthority (traditionalAuthorityId, name, districtId, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (1001, 'T/A Chemwanza', 1001, NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO TraditionalAuthority (traditionalAuthorityId, name, districtId, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (1002, 'T/A Mwanza Wamngono', 1001, NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO TraditionalAuthority (traditionalAuthorityId, name, districtId, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (1003, 'T/A Thyolo', 1002, NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO TraditionalAuthority (traditionalAuthorityId, name, districtId, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (1004, 'T/A Thyolo Wamngono', 1002, NOW(), 'AUTO', NOW(), 'AUTO', 0);
+
+
+/* Sites */
+INSERT INTO Site (siteId, name, traditionalAuthorityId, siteTypeId, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (1111, 'Mwanza Central', 1001, 0, NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO Site (siteId, name, traditionalAuthorityId, siteTypeId,  dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (2222, 'Mwanza South', 1002, 1, NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO Site (siteId, name, traditionalAuthorityId, siteTypeId,  dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (4321, 'Dedza North', 1003, 0, NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO Site (siteId, name, traditionalAuthorityId, siteTypeId,  dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (5555, 'Dedza Central', 1004, 1, NOW(), 'AUTO', NOW(), 'AUTO', 0);
+
+/* Counsellors */
+INSERT INTO Counsellor (counsellorId, name, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (1001, 'Yamiko J. Msosa', NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO Counsellor (counsellorId, name, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (1002, 'Tester J. Testing1', NOW(), 'AUTO', NOW(), 'AUTO', 0);
+INSERT INTO Counsellor (counsellorId, name, dateCreated, createdBy, dateModified, modifiedBy, status) VALUES (1003, 'Tester J. Testing2', NOW(), 'AUTO', NOW(), 'AUTO', 0);

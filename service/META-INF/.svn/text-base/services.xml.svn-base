@@ -1,0 +1,24 @@
+<serviceGroup>
+  <service name="SVCSpringInitialisationService" class="com.expotel.svc.webservices.SpringInit">
+    <description>Spring Initialization</description>
+    <parameter name="ServiceClass" >com.expotel.svc.webservices.SpringInit</parameter>
+    <parameter name="ServiceTCCL" >composite</parameter>
+    <parameter name="load-on-startup" >true</parameter>
+    <operation name="springInitialisation">
+      <messageReceiver class="org.apache.axis2.receivers.RawXMLINOutMessageReceiver"/>
+    </operation>
+  </service>
+
+  <service name="SingleViewOfClient">
+    <description>Single View of Client Services</description>
+    <parameter name="ServiceClass" >com.expotel.svc.webservices.SVCService</parameter>
+    <parameter name="ServiceObjectSupplier" >org.apache.axis2.extensions.spring.receivers.SpringAppContextAwareObjectSupplier</parameter>
+    <parameter name="SpringBeanName" >SVCService</parameter>
+    <messageReceivers>
+      <messageReceiver mep="http://www.w3.org/2004/08/wsdl/in-only"
+                       class="org.apache.axis2.rpc.receivers.RPCInOnlyMessageReceiver"/>
+      <messageReceiver mep="http://www.w3.org/2004/08/wsdl/in-out"
+                       class="org.apache.axis2.rpc.receivers.RPCMessageReceiver"/>
+    </messageReceivers>
+  </service>
+</serviceGroup>
